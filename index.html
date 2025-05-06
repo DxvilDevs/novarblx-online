@@ -21,7 +21,6 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
       padding: 40px 20px;
     }
 
@@ -45,6 +44,7 @@
       flex-wrap: wrap;
       gap: 30px;
       justify-content: center;
+      margin-bottom: 80px;
     }
 
     .stat-box {
@@ -61,29 +61,73 @@
       animation: fadeInUp 0.8s forwards;
     }
 
-    .stat-box:nth-child(2) {
-      animation-delay: 0.3s;
-    }
-    .stat-box:nth-child(3) {
-      animation-delay: 0.6s;
-    }
+    .stat-box:nth-child(2) { animation-delay: 0.3s; }
+    .stat-box:nth-child(3) { animation-delay: 0.6s; }
 
     @keyframes fadeInUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     @keyframes slideFadeIn {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .brands-section {
+      width: 100%;
+      max-width: 1000px;
+      margin-top: 40px;
+      text-align: center;
+    }
+
+    .brands-section h2 {
+      font-size: 2em;
+      color: white;
+      margin-bottom: 30px;
+    }
+
+    .brands-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+    }
+
+    .brand-card {
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 30px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+      padding: 20px;
+      width: 200px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      animation: fadeInUp 0.8s ease forwards;
+    }
+
+    .brand-card img {
+      width: 80px;
+      height: 80px;
+      object-fit: contain;
+      margin-bottom: 15px;
+    }
+
+    .brand-card a {
+      margin-top: 10px;
+      padding: 10px 20px;
+      background: #5865F2;
+      color: white;
+      text-decoration: none;
+      border-radius: 50px;
+      font-size: 0.95rem;
+      transition: background 0.3s ease;
+    }
+
+    .brand-card a:hover {
+      background: #4752C4;
     }
 
     @media (max-width: 768px) {
-      .stat-box {
+      .stat-box, .brand-card {
         min-width: 80%;
       }
     }
@@ -98,5 +142,45 @@
     <div class="stat-box">🎊 3504+ Happy Customers</div>
     <div class="stat-box">⭐ 5 Star Feedback Rating</div>
   </div>
+
+  <!-- OUR BRANDS SECTION -->
+  <section class="brands-section">
+    <h2>Our Brands</h2>
+    <div class="brands-grid">
+      <div class="brand-card">
+        <img src="https://imgur.com/sqJgZoB.png" alt="NOVA">
+        <a href="https://discord.gg/novamarketplace" target="_blank">Join Discord</a>
+      </div>
+      <div class="brand-card">
+        <img src="https://imgur.com/20JLSsS.png" alt="Hardware Inno.">
+        <a href="https://discord.gg/8G6CSUyvdq" target="_blank">Join Discord</a>
+      </div>
+      <div class="brand-card">
+        <img src="https://imgur.com/k1tawtJ.png" alt="Optic">
+        <a href="https://discord.gg/HA52qr4g5a" target="_blank">Join Discord</a>
+      </div>
+      <div class="brand-card">
+        <img src="https://imgur.com/bGCf7LE.png" alt="Latium Tech">
+        <a href="https://discord.gg/novamarketplace" target="_blank">Join Discord</a>
+      </div>
+      <div class="brand-card">
+        <img src="https://imgur.com/qoYsLVA.png" alt="Arteza">
+        <a href="https://discord.gg/novamarketplace" target="_blank">Join Discord</a>
+      </div>
+      <div class="brand-card">
+        <img src="https://imgur.com/kOBXd2q.png" alt="Secura">
+        <a href="https://discord.gg/SEvGyRHbez" target="_blank">Join Discord</a>
+      </div>
+      <div class="brand-card">
+        <img src="https://imgur.com/AubTEaK.png" alt="SolarSCP Essentials">
+        <a href="https://discord.gg/4JsKEqt8T3" target="_blank">Join Discord</a>
+      </div>
+      <div class="brand-card">
+        <img src="https://imgur.com/Gh66jmj.png" alt="JDS">
+        <a href="https://discord.gg/novamarketplace" target="_blank">Join Discord</a>
+      </div>
+    </div>
+  </section>
 </body>
 </html>
+
