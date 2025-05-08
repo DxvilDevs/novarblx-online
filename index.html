@@ -5,14 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="RoBlast - Premium Roblox products with 5000+ products sold and 5-star customer rating" />
   
-  <meta property="og:title" content="RoBlast | Premium Assets" />
-  <meta property="og:description" content="Premium Roblox assets with over 5000+ products sold and 5-star customer rating" />
+  <meta property="og:title" content="RoBlast | Premium Roblox Products" />
+  <meta property="og:description" content="Premium Roblox products with 5000+ products sold and 5-star customer rating" />
   <meta property="og:image" content="https://i.imgur.com/cBT44DU.png" />
-  <meta property="og:url" content="https://roblast.online" />
+  <meta property="og:url" content="https://roblast.com" />
   <meta property="og:type" content="website" />
   <meta name="theme-color" content="#5865F2">
 
-  <title>RoBlast | Premium Assets</title>
+  <title>RoBlast | Premium Roblox Products</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600;700&display=swap" rel="stylesheet">
@@ -334,6 +334,149 @@
         padding: 20px 15px;
       }
     }
+
+    .countdown-section {
+      width: 100%;
+      text-align: center;
+      padding: 20px 0;
+      margin-bottom: 50px;
+    }
+
+    .countdown-section h2 {
+      font-size: 3em;
+      font-weight: 700;
+      color: white;
+      margin-bottom: 40px;
+      position: relative;
+      display: inline-block;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .countdown-section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 90px;
+      height: 4px;
+      background: var(--accent-color);
+      border-radius: 3px;
+    }
+
+    .countdown-container {
+      display: flex;
+      justify-content: center;
+      gap: 35px;
+      margin-bottom: 40px;
+    }
+
+    .countdown-item {
+      background: var(--card-bg);
+      border-radius: var(--border-radius-large);
+      box-shadow: var(--card-shadow);
+      padding: 35px 30px;
+      min-width: 160px;
+      text-align: center;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInUp 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+      transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+      position: relative;
+    }
+
+    .countdown-item:not(:last-child):after {
+      content: ":";
+      position: absolute;
+      right: -25px;
+      top: 50%;
+      transform: translateY(-55%);
+      font-size: 3.5rem;
+      font-weight: 700;
+      color: white;
+    }
+
+    .countdown-item .number {
+      font-size: 4rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      line-height: 1;
+    }
+
+    .countdown-item .label {
+      font-size: 1.4rem;
+      color: var(--text-dark);
+      margin-top: 12px;
+      opacity: 0.8;
+    }
+
+    .countdown-message {
+      color: var(--text-light);
+      font-size: 1.2rem;
+      margin-top: 15px;
+      opacity: 0.9;
+    }
+
+    @media (max-width: 992px) {
+      .countdown-container {
+        gap: 25px;
+      }
+      
+      .countdown-item {
+        min-width: 140px;
+        padding: 30px 25px;
+      }
+      
+      .countdown-item .number {
+        font-size: 3.5rem;
+      }
+      
+      .countdown-item:not(:last-child):after {
+        right: -20px;
+        font-size: 3rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .countdown-container {
+        flex-wrap: wrap;
+        gap: 30px;
+        justify-content: center;
+      }
+      
+      .countdown-item {
+        min-width: 120px;
+        padding: 25px 20px;
+      }
+      
+      .countdown-item .number {
+        font-size: 3rem;
+      }
+      
+      .countdown-item .label {
+        font-size: 1.1rem;
+      }
+      
+      .countdown-item:not(:last-child):after {
+        content: "";
+        display: none;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .countdown-item {
+        padding: 20px 15px;
+        min-width: 100px;
+      }
+      
+      .countdown-item .number {
+        font-size: 2.5rem;
+      }
+      
+      .countdown-section h2 {
+        font-size: 2.2em;
+      }
+    }
   </style>
 </head>
 <body>
@@ -349,6 +492,29 @@
       <div class="stat-box"><i class="fas fa-star"></i> <span class="counter" data-target="5">0</span> Star Feedback Rating</div>
     </section>
 
+<section class="countdown-section" aria-labelledby="countdown-heading">
+      <h2 id="countdown-heading">Coming Soon</h2>
+      <div class="countdown-container">
+        <div class="countdown-item">
+          <div class="number" id="days">00</div>
+          <div class="label">Days</div>
+        </div>
+        <div class="countdown-item">
+          <div class="number" id="hours">00</div>
+          <div class="label">Hours</div>
+        </div>
+        <div class="countdown-item">
+          <div class="number" id="minutes">00</div>
+          <div class="label">Minutes</div>
+        </div>
+        <div class="countdown-item">
+          <div class="number" id="seconds">00</div>
+          <div class="label">Seconds</div>
+        </div>
+      </div>
+    </section>
+	  
+	  
     <section class="brands-section" aria-labelledby="brands-heading">
       <h2 id="brands-heading">Our Brands</h2>
       <div class="brands-grid">
