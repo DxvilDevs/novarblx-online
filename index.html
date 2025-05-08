@@ -16,6 +16,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="icon" href="https://i.imgur.com/cBT44DU.png" type="image/png">
   <style>
     :root {
@@ -117,6 +118,12 @@
       animation: fadeInUp 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
       transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
       color: var(--text-dark);
+    }
+
+    .stat-box i {
+      font-size: 1.8rem;
+      color: var(--accent-color);
+      margin-right: 8px;
     }
 
     .stat-box:hover {
@@ -394,6 +401,7 @@
     </section>
   </main>
 
+
   <footer class="page-footer">
     <p>© 2025 RoBlast. All rights reserved.</p>
   </footer>
@@ -436,11 +444,3 @@
           }
         });
       }
-      
-      animateCounters();
-      
-      window.addEventListener('scroll', animateCounters);
-    });
-  </script>
-</body>
-</html>
