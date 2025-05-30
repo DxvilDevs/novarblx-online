@@ -257,6 +257,8 @@
       border-top: 1px solid rgba(255, 255, 255, 0.15);
     }
 
+
+
     @keyframes fadeInUp {
       to { opacity: 1; transform: translateY(0); }
     }
@@ -417,6 +419,32 @@
       opacity: 0.9;
     }
 
+.logo-scroller {
+      width: 100%;
+      overflow: hidden;
+      white-space: nowrap;
+      box-sizing: border-box;
+      position: relative;
+    }
+
+    .logo-track {
+      display: inline-block;
+      animation: scroll 40s linear infinite;
+    }
+
+    .logo-track img {
+      height: 60px;
+      margin: 0 40px;
+      opacity: 0.5;
+      vertical-align: middle;
+      transition: transform 0.3s;
+    }
+
+    .logo-track img:hover {
+      transform: scale(1.1);
+      opacity: 0.7;
+    }
+
     @media (max-width: 992px) {
       .countdown-container {
         gap: 25px;
@@ -475,6 +503,14 @@
       
       .countdown-section h2 {
         font-size: 2.2em;
+      }
+
+@keyframes scroll {
+      0% {
+        transform: translateX(0%);
+      }
+      100% {
+        transform: translateX(-50%);
       }
     }
   </style>
@@ -573,14 +609,19 @@
 
 <section class="brands-section" aria-labelledby="brands-heading">
       <h2 id="brands-heading">Our Clients</h2>
-      <div class="brands-grid">
-        <div class="brand-card">
-          <img src="https://i.imgur.com/HRnIHhW.png" alt="Euro Tunnel - Le Shuttle">
-          <h3>Euro Tunnel - Le Shuttle</h3>
-          <a href="https://www.roblox.com/communities/7505190/Eurotunnel-Le-Shuttle#!/about" target="_blank" class="brand-button">Roblox Game</a>
-        </div>
-      </div>
-    </section>
+      <div class="logo-scroller">
+    	<div class="logo-track">
+      <!-- Repeat logos as needed -->
+      		<img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" alt="Logo" />
+      		<img src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg" alt="Logo" />
+      		<img src="https://upload.wikimedia.org/wikipedia/commons/4/47/PNG_transparency_demonstration_1.png" alt="Logo" />
+      		<img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" alt="Logo" />
+      		<img src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg" alt="Logo" />
+      		<img src="https://upload.wikimedia.org/wikipedia/commons/4/47/PNG_transparency_demonstration_1.png" alt="Logo" />
+      
+    </div>
+  </div>
+</section>
   </main>
 
   <footer class="page-footer">
